@@ -1,3 +1,5 @@
+# 1.1
+
 def swap(array, i, j):
     array[i], array[j] = array[j], array[i]
 
@@ -19,9 +21,12 @@ def quicksort(array, low, high):
         quicksort(array, low, pivot_location - 1)
         quicksort(array, pivot_location + 1, high)
 
+def Quicksort(array):
+    quicksort(array, 0, len(array) - 1)
+
 array = [4,3,6,0]
 
-quicksort(array, 0, 3)
+Quicksort(array)
 
-print("array: " + str(array))
+#print("Sorted array: " + str(array))
 
