@@ -1,14 +1,12 @@
-# 1.3
-import re
-import string
+import nltk
 
 
-regex = re.compile('[%s]' % re.escape(string.punctuation))
-
-text_array = []
+text = ''
 
 with open('text.txt') as f:
-    text_array = regex.sub(' ', f.read().lower()).split()
+    text = f.read()
+
+text_array = nltk.word_tokenize(text)
 
 word_dict = {}
 for word in text_array:
